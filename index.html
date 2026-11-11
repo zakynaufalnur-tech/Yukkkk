@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b18">
+  <title>TOPUPYUK — Top Up Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-one"></div><div class="glow glow-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">T</span><span>TOPUP<span class="brand-accent">YUK</span><small>GAME TOP UP CENTER</small></span></a>
+    <nav><a href="#games">Game</a><a href="#cara">Cara Top Up</a><a href="#cek">Cek Pesanan</a></nav>
+    <a class="nav-cta" href="#topup">Top Up <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> FAST • SAFE • EASY</div>
+        <h1>Push rank,<br>top up <span>sat-set.</span></h1>
+        <p>Top up game favoritmu dengan proses simpel, pembayaran praktis, dan status transaksi yang bisa kamu pantau.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#topup">Mulai Top Up <span>→</span></a><a class="text-link" href="#games">Jelajahi game</a></div>
+        <div class="hero-stats"><div><b>24/7</b><small>Order online</small></div><i></i><div><b>Instan</b><small>Proses otomatis</small></div><i></i><div><b>Praktis</b><small>Pilihan pembayaran</small></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-card"><span class="hero-card-tag">TOP UP YOUR GAME</span><div class="crystal">✦</div><strong>LEVEL UP<br>YOUR PLAY</strong><span class="hero-card-bottom">TOPUPYUK / 2026</span></div>
+        <div class="float-chip chip-one">⚡ Proses mudah</div><div class="float-chip chip-two">✦ Banyak pilihan game</div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><div><span>✓</span> Checkout praktis</div><div><span>◈</span> Pembayaran terintegrasi</div><div><span>⌁</span> Cek status pesanan</div></section>
+
+    <section class="section" id="games">
+      <div class="section-heading"><div><span class="kicker">PILIH FAVORITMU</span><h2>Game populer</h2></div><span class="section-note">Pilih game untuk mulai top up</span></div>
+      <div class="game-grid">
+        <button class="game-card selected" data-game="ml" type="button"><div class="game-art art-ml"><span>ML</span></div><div><b>Mobile Legends</b><small>Diamond</small></div><span class="game-arrow">↗</span></button>
+        <button class="game-card" data-game="ff" type="button"><div class="game-art art-ff"><span>FF</span></div><div><b>Free Fire</b><small>Diamond</small></div><span class="game-arrow">↗</span></button>
+        <button class="game-card" data-game="pubg" type="button"><div class="game-art art-pubg"><span>P</span></div><div><b>PUBG Mobile</b><small>UC</small></div><span class="game-arrow">↗</span></button>
+        <button class="game-card" data-game="gi" type="button"><div class="game-art art-gi"><span>G</span></div><div><b>Genshin Impact</b><small>Genesis Crystal</small></div><span class="game-arrow">↗</span></button>
+        <button class="game-card" data-game="valo" type="button"><div class="game-art art-valo"><span>V</span></div><div><b>Valorant</b><small>Points</small></div><span class="game-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="section order-section" id="topup">
+      <div class="section-heading"><div><span class="kicker">ORDER SEKARANG</span><h2>Top up pilihanmu</h2></div><span class="step-label">01 — 03</span></div>
+      <div class="order-layout">
+        <div class="form-panel">
+          <div class="step-title"><span>1</span><div><b>Masukkan data akun</b><small>Pastikan User ID benar sebelum lanjut.</small></div></div>
+          <div class="field-row"><label class="field">Game yang dipilih<input id="selectedGame" value="Mobile Legends" readonly></label><label class="field">User ID<input id="userId" placeholder="Contoh: 123456789" inputmode="numeric"></label></div>
+          <label class="field" id="zoneWrap">Zone ID<input id="zoneId" placeholder="Contoh: 1234" inputmode="numeric"></label>
+          <div class="step-title step-gap"><span>2</span><div><b>Pilih nominal</b><small>Harga ditampilkan dalam Rupiah.</small></div></div>
+          <div class="package-grid" id="packages"></div>
+          <div class="step-title step-gap"><span>3</span><div><b>Metode pembayaran</b><small>Pilih metode yang tersedia di checkout.</small></div></div>
+          <div class="payment-info"><div class="pay-logos"><span class="pay-qris">QRIS</span><span class="pay-dana">DANA</span><span class="pay-bank">BANK</span></div><p>Setelah menekan Bayar, kamu akan diarahkan ke halaman pembayaran aman Midtrans. Metode yang tampil mengikuti konfigurasi merchant.</p></div>
+          <button class="primary-btn pay-button" id="payButton" type="button">Lanjut ke Pembayaran <span>→</span></button>
+          <p class="secure-note">▣ Pembayaran diproses melalui halaman checkout Midtrans.</p>
+          <div class="notice" id="notice" role="status"></div>
+        </div>
+        <aside class="summary-panel">
+          <div class="summary-top"><span class="kicker">ORDER SUMMARY</span><span class="secure-pill">● Secure</span></div>
+          <div class="summary-game"><div class="mini-game" id="summaryIcon">ML</div><div><b id="summaryGame">Mobile Legends</b><small id="summaryItem">86 Diamonds</small></div></div>
+          <div class="summary-line"><span>User ID</span><b id="summaryUser">Belum diisi</b></div>
+          <div class="summary-line"><span>Zone ID</span><b id="summaryZone">—</b></div>
+          <div class="summary-line"><span>Harga</span><b id="summaryPrice">Rp20.000</b></div>
+          <div class="summary-total"><span>Total pembayaran</span><strong id="summaryTotal">Rp20.000</strong></div>
+          <div class="summary-foot">Pastikan data akun dan nominal sudah sesuai. Kesalahan input dapat menghambat pengiriman item.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section how-section" id="cara"><div class="section-heading"><div><span class="kicker">GAMPANG BANGET</span><h2>Cara top up</h2></div></div><div class="how-grid"><article><span>01</span><h3>Pilih game</h3><p>Pilih game dan masukkan data akun dengan benar.</p></article><article><span>02</span><h3>Pilih nominal</h3><p>Tentukan paket item yang ingin kamu beli.</p></article><article><span>03</span><h3>Bayar & pantau</h3><p>Selesaikan pembayaran lalu cek status transaksi.</p></article></div></section>
+
+    <section class="section check-section" id="cek"><div class="check-box"><div><span class="kicker">ORDER TRACKER</span><h2>Cek status pesanan</h2><p>Masukkan Order ID dari transaksi yang sudah dibuat.</p></div><div class="check-form"><input id="orderLookup" placeholder="Contoh: TY-..." aria-label="Order ID"><button class="secondary-btn" id="checkButton">Cek Status</button></div><div id="statusResult" class="status-result" aria-live="polite"></div></div></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">T</span><span>TOPUP<span class="brand-accent">YUK</span><small>GAME TOP UP CENTER</small></span></a><p>© 2026 TOPUPYUK. Demo project — gunakan akun merchant resmi untuk transaksi nyata.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
